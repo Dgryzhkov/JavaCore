@@ -5,8 +5,8 @@ public class Lesson19 {
         human.setName("Tom");
         human.getInfo();
         Human human2 = new Human();
-        human.setAge(18);
-        human.setName("Bob");
+        human2.setAge(18);
+        human2.setName("Bob");
         human2.getInfo();
     }
 }
@@ -14,6 +14,13 @@ public class Lesson19 {
 class Human {
     private String name;
     private int age;
+
+    public Human(String bob, int i) {
+    }
+
+    public Human() {
+
+    }
 
     public String getName() {
         return name;
