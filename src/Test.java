@@ -1,6 +1,8 @@
 public class Test {
     public static void main(String[] args) {
-        byte x = (byte) 260;
-        System.out.println(x);
+        int x=1;
+        Integer x2= 123;
+        Integer.parseInt("13");
+
     }
 }
