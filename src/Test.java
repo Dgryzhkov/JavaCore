@@ -1,12 +1,11 @@
-import Forest.*;
-import java.util.*;
-import Forest.Something.*;
+import Package1.Person;
 
-public class Test {
-    public static void main(String[] args) {
-        Tree tree1 = new Tree();
-        Squirrel squirrel1 = new Squirrel();
-        Scanner scanner = new Scanner(System.in);
-        SomeClass someClass = new SomeClass();
-    }
+public class Test extends Person{
+
+
+public Test(){
+    name ="Tom";
+}
+
+
 }
