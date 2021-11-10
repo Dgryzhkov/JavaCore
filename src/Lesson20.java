@@ -10,6 +10,7 @@ public class Lesson20 {
         h1.printNumberOfPeople();
         h2.printNumberOfPeople();
         h3.printNumberOfPeople();
+        System.out.println(h1);
 
 //        Humans.descritpion = "Nice";
 //        h1.getALlFields();
@@ -28,6 +29,9 @@ class Humans {
     private int age;
     private static int countPeople;
 
+    public String toString(){
+        return   name+","+age;
+    }
 
 //    public Humans() {
 //      this.name="Какое то имя";
