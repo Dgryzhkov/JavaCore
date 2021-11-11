@@ -1,8 +1,12 @@
 public class Test {
     public static void main(String[] args) {
-        int x=1;
-        Integer x2= 123;
-        Integer.parseInt("13");
+        //Upcasting -восходящее преобразование
+//Downcasting - нисходящее преобраование не безопасно
+        Animal a = new Animal();
+        Dog dog = (Dog) a;
+        dog.bark();
+
+
 
     }
 }
