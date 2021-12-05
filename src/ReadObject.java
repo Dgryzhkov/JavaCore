@@ -20,7 +20,7 @@ public class ReadObject {
 //            for (int i=0; i<personCount; i++){
 //                people[i]=(Person)ois.readObject();
 //            }
-           System.out.println(Arrays.toString(people));
+//         System.out.println(Arrays.toString(people));
 
 //            Person person1 = (Person)ois.readObject();
 //            Person person2 = (Person)ois.readObject();
