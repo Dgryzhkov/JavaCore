@@ -9,9 +9,9 @@ public class WriteObject {
         Person person2 = new Person(2,"Mike");
         Person person3 = new Person(3,"Mary");
         Person[]people ={person1, person2, person3};
-        try {
-            FileOutputStream fos = new FileOutputStream("people.bin");
-           ObjectOutputStream oos = new ObjectOutputStream(fos);
+        try(ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("people.bin"))) {
+            //FileOutputStream fos = new FileOutputStream("people.bin");
+          // ObjectOutputStream oos = new ObjectOutputStream(fos);
            oos.writeObject(people);
 //            oos.writeInt(people.length);
 //            for (Person person: people) {
@@ -21,7 +21,7 @@ public class WriteObject {
 //            oos.writeObject(person1);
 //            oos.writeObject(person2);
 //            oos.writeObject(person3);
-            oos.close();
+            //oos.close();
         } catch (FileNotFoundException e) {
             System.out.println("File not Found");
         } catch (IOException e) {

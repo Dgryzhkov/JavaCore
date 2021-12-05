@@ -7,9 +7,9 @@ import java.util.Arrays;
 
 public class ReadObject {
     public static void main(String[] args) {
-        try {
-            FileInputStream fis = new FileInputStream("people.bin");
-            ObjectInputStream ois = new ObjectInputStream(fis);
+        try (ObjectInputStream ois = new ObjectInputStream( new FileInputStream("people.bin"))){ // не нежно закрывать поток
+            //FileInputStream fis = new FileInputStream("people.bin");
+            //ObjectInputStream ois = new ObjectInputStream(fis);
 
             Person[] people = (Person[])ois.readObject();
             System.out.println(Arrays.toString(people));
@@ -28,7 +28,7 @@ public class ReadObject {
 //            System.out.println(person1);
 //            System.out.println(person2);
 //            System.out.println(person3);
-            ois.close();
+           // ois.close();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
