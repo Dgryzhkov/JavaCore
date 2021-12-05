@@ -2,7 +2,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
+
 
 public class ReadObject {
     public static void main(String[] args) {
@@ -11,8 +11,10 @@ public class ReadObject {
             ObjectInputStream ois = new ObjectInputStream(fis);
             Person person1 = (Person)ois.readObject();
             Person person2 = (Person)ois.readObject();
+            Person person3 = (Person)ois.readObject();
             System.out.println(person1);
             System.out.println(person2);
+            System.out.println(person3);
             ois.close();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
